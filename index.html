@@ -254,11 +254,15 @@
             <h2>Magnetohydrodynamics</h2>
             <p>
               Magnetism is important in many areas of astrophysics, such as in the dynamics of accretion disks and the 
-              formation of jets. Often the magnetic field can be treated as "frozen into" the fluid, 
-              so that the fluid motion causes the field lines to twist and turn. 
+              formation of jets.
+              <!--Often the magnetic field can be treated as "frozen into" the fluid, 
+              so that the fluid motion causes the field lines to twist and turn. -->
               The presence of the field also introduces new types of wave motion in the fluid, such as magnetosonic and Alfven waves.
+              Magnetism can be implemented into hydrodynamic solvers by simply adding a few terms into the governing equations. However, numerical 
+              noise can lead to the formation of magnetic monopoles, violating Gauss's law of magnetism. I work on developing techniques to 
+              combat these monopoles by either damping them or smoothing them out.
             </p>
-            <center>
+            <!--<center>
             <figure>
             <video width="350" height="auto" autoplay loop muted>
               <source src="Byz.mp4" type="video/mp4">
@@ -266,16 +270,11 @@
             </video>
             <figcaption> Simulation of an Alfven wave, which travels along the magnetic field lines. </figcaption>
             </figure>
-            </center>
+            </center>-->
             <p>
-              Magnetism can be implemented into hydrodynamic solvers by simply adding a few terms into the governing equations. However, numerical 
-              noise can lead to the formation of magnetic monopoles, violating Gauss's law of magnetism. I work on developing techniques to 
-              combat these monopoles by either damping them or smoothing them out.
-            </p>
-            <p>
-              As mentioned above, magnetism is thought to play a role in common envelope evolution. Though not dynamically important over small 
-              timescales, magnetic pressure can shape the ejecta from a CE event over the course of many years. This phenomenon is thought to 
-              be responsible for the bipolar plumes of the Calabash Nebula, which are observed to be threaded by magnetic fields. 
+              Magnetism is thought to play a role in common envelope evolution, as magnetic pressure can shape the ejecta 
+              from a CE event over the course of many years. This phenomenon is thought to 
+              be responsible for the bipolar plumes of nebulae such as the Calabash Nebula, which are observed to be threaded by magnetic fields. 
               Our magnetohydrodynamic solvers have shown the formation of the toroidal magnetic fields thought to drive these outflows.
             </p>
             <!-- 1280 x 1175 -->
