@@ -200,27 +200,46 @@
               For supersonic motion, shock waves are present which raise the entropy and thus lower the accretion rate.
             </p>
 
-            <h2>Supernova Remnants (Core-Collapse)</h2>
+            <h2>Frame-Dragging in Magnetar Disks</h2>
             <p>
-              When a star goes supernova, it launches a forward shock into the surrounding circumstellar medium (CSM)
-              and sends a reverse shock backward though the ejecta. 
-              The shell of material between these shocks experiences Rayleigh-Taylor instabilities, creating turbulence which leads to synchrotron emission in the radio band. 
-              SNIIb are a subclass of supernovae which have lost most of their hydrogen envelope prior to exploding due to winds or binary interactions, and thus have a dense CSM. 
-              One such supernova is SN 1993J, which has been observed over a period of 30 years and can be compared to theoretical models to better understand 
-              the structure of the CSM and thus the mechanism of mass loss. To this end, we model SN 1993J using the 1-D hydrodynamics code 
-              <a href="https://github.com/duffell/RT1D">RT1D</a>, which has been calibrated to include the effects of 3-D turbulence.
+              Superluminous supernovae are thought to be driven by a magnetar central engine fed by an accretion disk. 
+              The disk may be misaligned with the magnetar spin due to a natal kick, 
+              leading to precession of the disk due to a prediction of general relativity known as the Lense-Thirring (LT) effect (a.k.a. frame-dragging). 
+              The recent superluminous supernova 2024afav showed oscillations consistent with the LT effect,
+              providing the first observation of the LT effect in any object besides a black hole (and the Earth). 
+              The increase in frequency of these oscillations is consistent with theoretical calculations of the contraction of the disk. 
+              This mechanism also explains bumps in the light curves of several other superluminous supernovae, 
+              providing direct evidence for the role of magnetars as the central engines of these events.
             </p>
             <center>
               <figure>
-                <img src="simulation_comparison3.png" alt="simulation and observation comparison" width="500" height="auto">
-                <figcaption>Comparison of <a href="https://github.com/duffell/RT1D">RT1D</a> simulations of SN 1993J with radio interferometry data.</figcaption>
+                <img src="LT_visual3.png" alt="LT diagram" width="400" height="auto">
+                <figcaption>Diagram of the magnetar spin and disk precession due to LT torques.</figcaption>
               </figure>
+            </center>
+
+            <h2>Thermonuclear Supernovae</h2>
+            <p>
+              Thermonuclear supernovae can be caused by accretion onto a white dwarf from a Roche lobe-filling binary companion. 
+              This means that a large portion of the ejecta is blocked by the companion, carving out a low-density wake. 
+              The shock-heated gas within this wake initially outshines the rest of the supernova, and because it protrudes from 
+              the unshocked ejecta it is visible from many angles. As the wake differs in composition from the unshocked ejecta, 
+              this also affects the nebular line emission profiles when the ejecta becomes optically thin.
+            </p>
+            <center>
+            <figure>
+            <video width="500" height="auto" autoplay loop muted>
+              <source src="slicetemp.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption> Simulation of supernova ejecta colliding with a binary companion. </figcaption>
+            </figure>
             </center>
 
             <h2>Supernova Remnants (Thermonuclear)</h2>
             <p>
-              Type Ia supernovae are caused by accretion onto a white dwarf from a Roche lobe-filling binary companion. 
-              This means that a large portion of the ejecta is blocked by the companion, carving out a low-density wake. 
+              The modifications to the ejecta structure discussed above affect the subsequent evolution as the gas expands to 
+              become a supernova remnant over thousands of years. 
               We model such remnants using the expanding-grid hydrodynamics code <a href="https://github.com/smandal97/Sprout">Sprout</a>, 
               which allows us to follow the evolution of the remnant over several orders of magnitude in time. 
             </p>
@@ -251,21 +270,20 @@
               </figure>
             </center>
 
-            <h2>Frame-Dragging in Magnetar Disks</h2>
+            <h2>Supernova Remnants (Core-Collapse)</h2>
             <p>
-              Superluminous supernovae are thought to be driven by a magnetar central engine fed by an accretion disk. 
-              The disk may be misaligned with the magnetar spin due to a natal kick, 
-              leading to precession of the disk due to a prediction of general relativity known as the Lense-Thirring (LT) effect (a.k.a. frame-dragging). 
-              The recent superluminous supernova 2024afav showed oscillations consistent with the LT effect,
-              providing the first observation of the LT effect in any object besides a black hole (and the Earth). 
-              The increase in frequency of these oscillations is consistent with theoretical calculations of the contraction of the disk. 
-              This mechanism also explains bumps in the light curves of several other superluminous supernovae, 
-              providing direct evidence for the role of magnetars as the central engines of these events.
+              When a star goes supernova, it launches a forward shock into the surrounding circumstellar medium (CSM)
+              and sends a reverse shock backward though the ejecta. 
+              The shell of material between these shocks experiences Rayleigh-Taylor instabilities, creating turbulence which leads to synchrotron emission in the radio band. 
+              SNIIb are a subclass of supernovae which have lost most of their hydrogen envelope prior to exploding due to winds or binary interactions, and thus have a dense CSM. 
+              One such supernova is SN 1993J, which has been observed over a period of 30 years and can be compared to theoretical models to better understand 
+              the structure of the CSM and thus the mechanism of mass loss. To this end, we model SN 1993J using the 1-D hydrodynamics code 
+              <a href="https://github.com/duffell/RT1D">RT1D</a>, which has been calibrated to include the effects of 3-D turbulence.
             </p>
             <center>
               <figure>
-                <img src="LT_visual3.png" alt="LT diagram" width="400" height="auto">
-                <figcaption>Diagram of the magnetar spin and disk precession due to LT torques.</figcaption>
+                <img src="simulation_comparison3.png" alt="simulation and observation comparison" width="500" height="auto">
+                <figcaption>Comparison of <a href="https://github.com/duffell/RT1D">RT1D</a> simulations of SN 1993J with radio interferometry data.</figcaption>
               </figure>
             </center>
             
@@ -324,25 +342,6 @@
               The use of a moving mesh allows us to construct a boundary which moves throughout the simulation domain, possibly in response to 
               gravitational or hydrodynamic forces.
             </p>
-          <!--
-            <center>
-            <figure>
-            <video width="450" height="auto" autoplay loop muted>
-              <source src="sliceanim.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <figcaption> Spherical boundary moving supersonically through air. </figcaption>
-            </figure>
-            </center>
-          -->
-          
-          <!-- 640 x 480 -->
-            <center>
-              <figure>
-                <img src="mesh000240.png" alt="Voronoi mesh for planetary engulfment" width="600" height="auto">
-                <figcaption> A snapshot of the Voronoi mesh containing a moving boundary. </figcaption>
-              </figure>
-            </center>
             
             <h2>Computational Resources</h2>
             <p>
