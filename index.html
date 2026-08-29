@@ -343,10 +343,9 @@
             -->
             <h2>Simulation Techniques</h2>
             <p>
-              When solving the hydrodynamic equations, there are two schools of thought, each of which has inherent strengths and weaknesses. 
-              The Lagrangian interpretation models the fluid as a collection of particles, while the Eulerian interpretation divides 
-              the space into a mesh. The moving-mesh method has been developed with the goal of combining the strengths of both, using a Voronoi 
-              tessellation to draw a dynamic mesh around a set of moving particles.
+              Hydrodynamical modeling typically divides a fluid into either a discrete mesh or discrete particles. 
+              The moving-mesh method combines the strengths of both, using a Voronoi tessellation to draw a dynamic 
+              mesh around a set of moving particles. 
             </p>
             <center>
               <figure>
@@ -355,18 +354,13 @@
               </figure>
             </center>
             <p>
-              I am interested in the development of techniques for hydrodynamical modeling, particularly moving-mesh methods. Despite their high 
-              computational cost, moving meshes are well-suited to a variety of problems.
-              For example, the presence of an inner boundary condition such as a reflection or accretion boundary is desirable for a variety of studies. 
-              The use of a moving mesh allows us to construct a boundary which moves throughout the simulation domain, possibly in response to 
-              gravitational or hydrodynamic forces.
-            </p>
-            <p>
-              Publications: <a href="https://arxiv.org/abs/1904.09256">Prust & Chang (2019)</a>, 
-              <a href="https://arxiv.org/abs/2002.04287">Prust (2020)</a>, 
-              <a href="https://arxiv.org/abs/2412.18226">Prust et al. (2025)</a>, 
-              <a href="https://arxiv.org/abs/2507.19722">Kumar et al. (2025)</a>
-              
+              I am interested in the development of moving-mesh techniques, as they are well-suited to a variety of problems. 
+              In particular, I have worked on:
+              <ul>
+                <li>Individual time-stepping: <a href="https://arxiv.org/abs/1904.09256">(Prust & Chang 2019)</a></li>
+                <li>Moving and reactive boundary conditions: <a href="https://arxiv.org/abs/2002.04287">(Prust 2020)</a></li>
+                <li>Mitigation of upwind violations: <a href="https://arxiv.org/abs/2412.18226">(Prust et al. 2025)</a></li>
+              </ul>
             </p>
             
             <h2>Computational Resources</h2>
